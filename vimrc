@@ -1,7 +1,17 @@
+" Use Vim mode
+set nocompatible
+
 "Load vim-plug
 if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl --create-dirs -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
+
+" Load any possible pre-configs (disabling YCM for example)
+if filereadable(expand("~/.vimrc.before"))
+    source ~/.vimrc.before
+endif
+
+let s:enable_ycm = get(g:, 'enable_ycm', 1)
 
 " Start vim-plug
 call plug#begin('~/.vim/plugged')
@@ -12,6 +22,10 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+
+if s:enable_ycm
+    Plug 'Valloric/YouCompleteMe'
+endif
 
 " End vim-plug
 call plug#end()
