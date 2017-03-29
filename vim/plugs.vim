@@ -1,6 +1,9 @@
 " Check if we want to enable YouCompleteMe
 let s:enable_ycm = get(g:, 'enable_ycm', 1)
 
+" Note that .plug files are in viml
+au BufRead,BufNewFile *.plug set filetype=vim
+
 " Start vim-plug
 call plug#begin('~/.vim/plugged')
 
