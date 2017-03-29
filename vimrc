@@ -50,7 +50,7 @@ set laststatus=2
 set enc=utf-8
 
 " Configure airline
-let g:airline_theme='murmur'
+let g:airline_theme='murmurc'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 let g:airline#extensions#whitespace#enabled = 1
