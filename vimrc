@@ -1,11 +1,6 @@
 " Use Vim mode
 set nocompatible
 
-"Load vim-plug
-if empty(glob("~/.vim/autoload/plug.vim"))
-    execute '!curl --create-dirs -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
-endif
-
 " Load any possible pre-configs (disabling YCM for example)
 if filereadable(expand("~/.vimrc.before"))
     source ~/.vimrc.before
