@@ -11,24 +11,13 @@ if filereadable(expand("~/.vimrc.before"))
     source ~/.vimrc.before
 endif
 
-let s:enable_ycm = get(g:, 'enable_ycm', 1)
-
-" Start vim-plug
-call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'farmergreg/vim-lastplace'
-Plug 'junegunn/vim-easy-align'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
-
-if s:enable_ycm
-    Plug 'Valloric/YouCompleteMe'
+" Load plugins
+if filereadable(expand("~/.vim/plugs.vim"))
+    source ~/.vim/plugs.vim
 endif
 
-" End vim-plug
-call plug#end()
+" Note that .plug files are in viml
+au BufRead,BufNewFile *.plug set filetype=vim
 
 filetype plugin indent on
 
