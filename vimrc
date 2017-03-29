@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'farmergreg/vim-lastplace'
 Plug 'junegunn/vim-easy-align'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 " End vim-plug
 call plug#end()
