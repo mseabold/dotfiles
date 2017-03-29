@@ -2,3 +2,4 @@
 - link:
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
