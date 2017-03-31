@@ -1,6 +1,8 @@
 " Use Vim mode
 set nocompatible
 
+set enc=utf-8
+
 " Load any possible pre-configs (disabling YCM for example)
 if filereadable(expand("~/.vimrc.before"))
     source ~/.vimrc.before
@@ -16,9 +18,10 @@ filetype plugin indent on
 " Dark terminals FTW
 set background=dark
 
+" Always show the status line
 set laststatus=2
-set enc=utf-8
 
+" Set up default formatting options
 set nowrap
 set smartindent
 set autoindent
@@ -26,15 +29,21 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set nocompatible
+
+" Smarter backspace
 set backspace=indent,eol,start
 
+" Create quick controls for cycling buffers
 map <C-n> :bn<CR>
 map <c-m> :bp<CR>
 
+" Allow switching off a modified buffer
 set hidden
 
 " Now load plugin and local settings
 if filereadable(expand('~/.vim/settings.vim'))
     source ~/.vim/settings.vim
 endif
+
+" Show highlight tabs and trailing spaces
+set list listchars=tab:\ \ ,trail:·
