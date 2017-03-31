@@ -5,7 +5,11 @@
     ~/.tmux.conf: tmux.conf
 
 - link:
-    ~/bin/astyle: work/bin/astyle
-    ~/bin/boxes: work/bin/boxes
+    ~/bin/astyle:
+        path: work/bin/astyle
+        create: true
+    ~/bin/boxes:
+        path: work/bin/boxes
+        create: true
     ~/.vim/settings/work.vim: work/work.vim
     ~/.vim/cpp.vimrc: work/cpp.vimrc
