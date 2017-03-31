@@ -16,4 +16,9 @@ if s:enable_ycm
     source ~/.vim/plugs/ycm.plug
 endif
 
+" Allow user to specify plugins without the need to fork
+if filereadable(expand("~/.local_plugs.vim"))
+    source ~/.local_plugs.vim
+endif
+
 call plug#end()
