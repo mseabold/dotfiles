@@ -1,0 +1,11 @@
+- clean: ['~']
+- link:
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
+
+- link:
+    ~/bin/astyle: work/bin/astyle
+    ~/bin/boxes: work/bin/boxes
+    ~/.vim/settings/work.vim: work/work.vim
+    ~/.vim/cpp.vimrc: work/cpp.vimrc
