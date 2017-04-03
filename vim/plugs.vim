@@ -16,6 +16,11 @@ if s:enable_ycm
     source ~/.vim/plugs/ycm.plug
 endif
 
+" Load work plugins if present
+if filereadable(expand("~/.vim/plugs/work.plug"))
+    source ~/.vim/plugs/work.plug
+endif
+
 " Allow user to specify plugins without the need to fork
 if filereadable(expand("~/.local_plugs.vim"))
     source ~/.local_plugs.vim

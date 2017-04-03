@@ -13,3 +13,4 @@
         create: true
     ~/.vim/settings/work.vim: work/work.vim
     ~/.vim/cpp.vimrc: work/cpp.vimrc
+    ~/.vim/plugs/work.plug: work/work.plug
