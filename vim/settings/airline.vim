@@ -6,3 +6,6 @@ let g:airline#extensions#whitespace#enabled = 1
 
 " User powerline for fancy status lines. Requires a powerline font installed
 let g:airline_powerline_fonts = 1
+
+" Ignore the preview window (which YCM uses extensively)
+let g:airline_exclude_preview = 1
