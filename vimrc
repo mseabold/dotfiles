@@ -40,6 +40,12 @@ map <c-m> :bp<CR>
 " Allow switching off a modified buffer
 set hidden
 
+" Configure search options
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
 " Now load plugin and local settings
 if filereadable(expand('~/.vim/settings.vim'))
     source ~/.vim/settings.vim
