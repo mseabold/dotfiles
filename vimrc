@@ -46,10 +46,13 @@ set hlsearch
 set ignorecase
 set smartcase
 
+" Map to remove search highlights
+map <silent> <C-h> :nohl<CR>
+
+" Show highlight tabs and trailing spaces
+set list listchars=tab:\ \ ,trail:·
+
 " Now load plugin and local settings
 if filereadable(expand('~/.vim/settings.vim'))
     source ~/.vim/settings.vim
 endif
-
-" Show highlight tabs and trailing spaces
-set list listchars=tab:\ \ ,trail:·
