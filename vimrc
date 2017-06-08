@@ -49,6 +49,11 @@ set smartcase
 " Map to remove search highlights
 map <silent> <C-h> :nohl<CR>
 
+" Map jk/kj to <esc>. Note that this causes small visual pauses when actually
+" typing j or k
+inoremap jk <ESC>
+inoremap kj <ESC>
+
 " Show highlight tabs and trailing spaces
 set list listchars=tab:\ \ ,trail:·
 
