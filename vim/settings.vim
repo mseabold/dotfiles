@@ -14,6 +14,7 @@ endif
 
 " Finally, if the current project provides settings
 " apply them as the highest priority
+" NOTE: This will bail out of vim-projectroot is not installed
 try
     let rootpath = projectroot#get()
     if len(rootpath) > 0
@@ -23,4 +24,5 @@ try
         endif
     endif
 catch
+    " No vim-projectroot present, can't load project settings
 endtry
