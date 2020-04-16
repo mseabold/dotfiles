@@ -11,3 +11,16 @@ endfor
 if filereadable(expand('~/.local_settings.vim')) 
     source ~/.local_settings.vim
 endif
+
+" Finally, if the current project provides settings
+" apply them as the highest priority
+try
+    let rootpath = projectroot#get()
+    if len(rootpath) > 0
+        let settingspath = rootpath . '/.project_settings.vim'
+        if filereadable(settingspath)
+            exec 'source' settingspath
+        endif
+    endif
+catch
+endtry
