@@ -11,6 +11,9 @@ vim.keymap.set({'n', 'i'}, '<C-h>', '<Cmd>nohl<CR>', { silent = true })
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- No mouse
+vim.o.mouse = ""
+
 require("config.lazy")
 require("config.lsps")
 
