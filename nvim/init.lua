@@ -18,3 +18,15 @@ require("config.lazy")
 require("config.lsps")
 
 vim.cmd.colorscheme 'catppuccin-mocha'
+vim.opt.listchars = {
+  tab = '',
+  trail = ''
+}
+
+vim.wo.list = true
+vim.bo.autoindent = true
+vim.bo.smartindent = true
+vim.bo.shiftwidth = 4
+vim.bo.tabstop = 4
+vim.bo.softtabstop = 4
+
