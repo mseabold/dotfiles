@@ -4,6 +4,7 @@
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
     ~/.config/nvim: nvim
+    ~/.gitmux.conf: gitmux.conf
 - create:
   - ~/.config/tmux/plugins
 - git:
