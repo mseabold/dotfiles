@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'c', 'python', 't32', 'toml', 'yaml', 'cmake', 'tmux', 'rust' },
+  pattern = { 'c', 'python', 't32', 'toml', 'yaml', 'cmake', 'tmux', 'rust', 'comment' },
   callback = function() vim.treesitter.start() end,
 })
 
@@ -8,6 +8,6 @@ return {
   lazy = false,
   build = ':TSUpdate',
   config = function(_,_)
-    require('nvim-treesitter').install { "rust", "python", "t32", "cmake", "toml", "yaml", "tmux" }
+    require('nvim-treesitter').install { "rust", "python", "t32", "cmake", "toml", "yaml", "tmux", "comment" }
   end
 }
