@@ -8,6 +8,6 @@ return {
   lazy = false,
   build = ':TSUpdate',
   config = function(_,_)
-    require('nvim-treesitter').install { "rust", "python", "t32", "cmake", "toml", "yaml", "tmux", "comment" }
+    require('nvim-treesitter').install { "rust", "python", "t32", "cmake", "toml", "yaml", "tmux" }
   end
 }
